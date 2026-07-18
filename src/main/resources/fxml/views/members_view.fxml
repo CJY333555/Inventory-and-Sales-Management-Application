@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.techshop.inventorypos.controller.views.MembersController"
+      spacing="14" styleClass="content-area" VBox.vgrow="ALWAYS">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Members" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="addButton" text="  Add Member" styleClass="primary-button">
+            <graphic><ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                <Image url="@../../images/add.png"/>
+            </ImageView></graphic>
+        </Button>
+        <Button fx:id="editButton" text="  Edit" styleClass="secondary-button">
+            <graphic><ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                <Image url="@../../images/edit.png"/>
+            </ImageView></graphic>
+        </Button>
+        <Button fx:id="deleteButton" text="  Delete" styleClass="danger-button">
+            <graphic><ImageView fitWidth="16" fitHeight="16" preserveRatio="true">
+                <Image url="@../../images/delete.png"/>
+            </ImageView></graphic>
+        </Button>
+    </HBox>
+
+    <TableView fx:id="memberTable" VBox.vgrow="ALWAYS" styleClass="modern-table">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colName" text="Name" prefWidth="200"/>
+            <TableColumn fx:id="colPhone" text="Phone" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="220"/>
+            <TableColumn fx:id="colType" text="Membership" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox fx:id="paginationContainer" alignment="CENTER"/>
+
+    <Label fx:id="statusLabel" text="Ready" styleClass="hint-label"/>
+
+</VBox>

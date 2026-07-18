@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.techshop.inventorypos.controller.views.ReportsController"
+      spacing="20" styleClass="content-area" VBox.vgrow="ALWAYS">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Reports" styleClass="page-title"/>
+
+    <VBox styleClass="panel-card" spacing="10">
+        <padding><Insets top="16" right="16" bottom="16" left="16"/></padding>
+        <Label text="Sales by Category" styleClass="panel-title"/>
+        <TableView fx:id="categoryTable" prefHeight="240">
+            <columns>
+                <TableColumn fx:id="colCat" text="Category" prefWidth="220"/>
+                <TableColumn fx:id="colUnitsSold" text="Units Sold" prefWidth="120"/>
+                <TableColumn fx:id="colRevenue" text="Revenue (RM)" prefWidth="150"/>
+            </columns>
+        </TableView>
+        <HBox fx:id="paginationContainer" alignment="CENTER"/>
+    </VBox>
+
+    <Label fx:id="summaryLabel" styleClass="hint-label"/>
+
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.techshop.inventorypos.dialog.MemberDialogController"
+      styleClass="dialog-root" spacing="0" prefWidth="420">
+
+    <VBox styleClass="dialog-header" spacing="4">
+        <padding><Insets top="20" right="24" bottom="18" left="24"/></padding>
+        <Label fx:id="dialogTitle" text="Add Member" styleClass="dialog-title"/>
+        <Label text="Fill in the member details below" styleClass="dialog-subtitle"/>
+    </VBox>
+
+    <VBox styleClass="dialog-body" spacing="16">
+        <padding><Insets top="20" right="24" bottom="10" left="24"/></padding>
+
+        <VBox spacing="6">
+            <Label text="Full Name" styleClass="field-label"/>
+            <TextField fx:id="nameField" promptText="e.g. Tan Wei Ming" styleClass="dialog-field"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label text="Phone Number" styleClass="field-label"/>
+            <TextField fx:id="phoneField" promptText="e.g. 012-3456789" styleClass="dialog-field"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label text="Email" styleClass="field-label"/>
+            <TextField fx:id="emailField" promptText="e.g. name@example.com" styleClass="dialog-field"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label text="Membership Type" styleClass="field-label"/>
+            <ComboBox fx:id="membershipBox" maxWidth="Infinity" styleClass="dialog-field"/>
+        </VBox>
+
+        <Label fx:id="errorLabel" styleClass="error-label" wrapText="true" managed="false" visible="false"/>
+    </VBox>
+
+    <HBox styleClass="dialog-footer" spacing="10" alignment="CENTER_RIGHT">
+        <padding><Insets top="16" right="24" bottom="20" left="24"/></padding>
+        <Button fx:id="cancelButton" text="Cancel" styleClass="secondary-button"/>
+        <Button fx:id="saveButton" text="Save Member" styleClass="primary-button"/>
+    </HBox>
+
+</VBox>

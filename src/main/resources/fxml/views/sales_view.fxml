@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.techshop.inventorypos.controller.views.SalesController"
+      spacing="16" styleClass="content-area" VBox.vgrow="ALWAYS">
+
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Sales" styleClass="page-title"/>
+
+    <VBox styleClass="panel-card" spacing="10">
+        <padding><Insets top="14" right="16" bottom="14" left="16"/></padding>
+        <HBox spacing="12" alignment="CENTER_LEFT">
+            <ComboBox fx:id="productBox" promptText="Select product" prefWidth="200"/>
+            <TextField fx:id="quantityField" promptText="Qty" prefWidth="70"/>
+            <ComboBox fx:id="memberBox" promptText="Walk-in (no member)" prefWidth="200"/>
+            <Button fx:id="recordSaleButton" text="Record Sale" styleClass="primary-button"/>
+        </HBox>
+        <Label fx:id="saleStatusLabel" styleClass="hint-label"/>
+    </VBox>
+
+    <TableView fx:id="salesTable" VBox.vgrow="ALWAYS" styleClass="modern-table">
+        <columns>
+            <TableColumn fx:id="colSaleId" text="Sale ID" prefWidth="70"/>
+            <TableColumn fx:id="colDate" text="Date" prefWidth="160"/>
+            <TableColumn fx:id="colProduct" text="Product" prefWidth="200"/>
+            <TableColumn fx:id="colQuantity" text="Quantity" prefWidth="90"/>
+            <TableColumn fx:id="colMember" text="Member" prefWidth="160"/>
+            <TableColumn fx:id="colTotal" text="Total (RM)" prefWidth="110"/>
+        </columns>
+    </TableView>
+
+    <HBox fx:id="paginationContainer" alignment="CENTER"/>
+
+</VBox>

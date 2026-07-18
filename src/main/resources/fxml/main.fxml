@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.techshop.inventorypos.controller.MainController"
+            styleClass="root-pane">
+
+    <!-- Top bar -->
+    <top>
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="12">
+            <padding><Insets top="12" right="20" bottom="12" left="20"/></padding>
+            <Label text="Inventory &amp; Sales Management" styleClass="app-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <TextField fx:id="searchField" promptText="Search product..." styleClass="search-field"/>
+        </HBox>
+    </top>
+
+    <!-- Sidebar navigation -->
+    <left>
+        <VBox styleClass="sidebar" spacing="6" prefWidth="200">
+            <padding><Insets top="20" right="10" bottom="20" left="10"/></padding>
+            <Button fx:id="navDashboard" text="  Dashboard" styleClass="nav-button" maxWidth="Infinity">
+                <graphic><ImageView fitWidth="18" fitHeight="18" preserveRatio="true">
+                    <Image url="@../images/dashboard.png"/>
+                </ImageView></graphic>
+            </Button>
+            <Button fx:id="navProducts" text="  Products" styleClass="nav-button" maxWidth="Infinity">
+                <graphic><ImageView fitWidth="18" fitHeight="18" preserveRatio="true">
+                    <Image url="@../images/box.png"/>
+                </ImageView></graphic>
+            </Button>
+            <Button fx:id="navMembers" text="  Members" styleClass="nav-button" maxWidth="Infinity">
+                <graphic><ImageView fitWidth="18" fitHeight="18" preserveRatio="true">
+                    <Image url="@../images/members.png"/>
+                </ImageView></graphic>
+            </Button>
+            <Button fx:id="navSales" text="  Sales" styleClass="nav-button" maxWidth="Infinity">
+                <graphic><ImageView fitWidth="18" fitHeight="18" preserveRatio="true">
+                    <Image url="@../images/cart.png"/>
+                </ImageView></graphic>
+            </Button>
+            <Button fx:id="navReports" text="  Reports" styleClass="nav-button" maxWidth="Infinity">
+                <graphic><ImageView fitWidth="18" fitHeight="18" preserveRatio="true">
+                    <Image url="@../images/chart.png"/>
+                </ImageView></graphic>
+            </Button>
+        </VBox>
+    </left>
+
+    <!-- Swappable page content -->
+    <center>
+        <StackPane fx:id="contentArea"/>
+    </center>
+
+    <!-- Status bar -->
+    <bottom>
+        <HBox styleClass="statusbar" alignment="CENTER_LEFT">
+            <padding><Insets top="6" right="20" bottom="6" left="20"/></padding>
+            <Label fx:id="versionLabel" text="v1.0.0"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

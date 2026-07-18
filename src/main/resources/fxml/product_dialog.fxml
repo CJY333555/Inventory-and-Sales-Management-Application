@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.techshop.inventorypos.dialog.ProductDialogController"
+      styleClass="dialog-root" spacing="0" prefWidth="420">
+
+    <VBox styleClass="dialog-header" spacing="4">
+        <padding><Insets top="20" right="24" bottom="18" left="24"/></padding>
+        <Label fx:id="dialogTitle" text="Add Product" styleClass="dialog-title"/>
+        <Label text="Fill in the product details below" styleClass="dialog-subtitle"/>
+    </VBox>
+
+    <VBox styleClass="dialog-body" spacing="16">
+        <padding><Insets top="20" right="24" bottom="10" left="24"/></padding>
+
+        <VBox spacing="6">
+            <Label text="Product Name" styleClass="field-label"/>
+            <TextField fx:id="nameField" promptText="e.g. Wireless Mouse" styleClass="dialog-field"/>
+        </VBox>
+
+        <VBox spacing="6">
+            <Label text="Category" styleClass="field-label"/>
+            <ComboBox fx:id="categoryBox" editable="true" promptText="e.g. Electronics" maxWidth="Infinity" styleClass="dialog-field"/>
+        </VBox>
+
+        <HBox spacing="16">
+            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                <Label text="Price (RM)" styleClass="field-label"/>
+                <TextField fx:id="priceField" promptText="0.00" styleClass="dialog-field"/>
+            </VBox>
+            <VBox spacing="6" HBox.hgrow="ALWAYS">
+                <Label text="Stock Quantity" styleClass="field-label"/>
+                <TextField fx:id="stockField" promptText="0" styleClass="dialog-field"/>
+            </VBox>
+        </HBox>
+
+        <Label fx:id="errorLabel" styleClass="error-label" wrapText="true" managed="false" visible="false"/>
+    </VBox>
+
+    <HBox styleClass="dialog-footer" spacing="10" alignment="CENTER_RIGHT">
+        <padding><Insets top="16" right="24" bottom="20" left="24"/></padding>
+        <Button fx:id="cancelButton" text="Cancel" styleClass="secondary-button"/>
+        <Button fx:id="saveButton" text="Save Product" styleClass="primary-button"/>
+    </HBox>
+
+</VBox>
