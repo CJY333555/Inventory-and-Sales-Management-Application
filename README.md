@@ -1,5 +1,17 @@
 # InventoryPOS — Inventory & Sales Management System
 
+<div align="center">
+
+*Built with Java · Spring Boot · JavaFX · MySQL · Maven*
+
+![Java](https://img.shields.io/badge/Java-17-007396?style=flat&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-6DB33F?style=flat&logo=springboot&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-21-8A2BE2?style=flat)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat&logo=mysql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-3.9-C71A36?style=flat&logo=apachemaven&logoColor=white)
+
+</div>
+
 A desktop Inventory & Sales Management System built with **JavaFX** (UI) and **Spring Boot** (dependency injection, Spring Data JPA, transactions), backed by **MySQL**. Built as a personal portfolio project alongside TechShop Leap (a PHP e-commerce web app), to demonstrate a proper layered Java/Spring backend architecture on a similar retail domain.
 
 ---
