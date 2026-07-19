@@ -32,6 +32,9 @@ A desktop Inventory & Sales Management System built with **JavaFX** (UI) and **S
 **Members**
 ![Members](screenshots/members.png)
 
+**Add/Edit Member Dialog**
+![Member Dialog](screenshots/member-dialog.png)
+
 **Sales**
 ![Sales](screenshots/sales.png)
 
