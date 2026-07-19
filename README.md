@@ -18,8 +18,6 @@ A desktop Inventory & Sales Management System built with **JavaFX** (UI) and **S
 
 ## Screenshots
 
-> _Add your own screenshots below — run the app, take a screenshot of each page (`Win + Shift + S` on Windows), save them into the `screenshots/` folder using the filenames below, then they'll display automatically here on GitHub._
-
 **Dashboard**
 ![Dashboard](screenshots/dashboard.png)
 
